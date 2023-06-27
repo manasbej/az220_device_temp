@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: azdemo 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: azdemo
+  template:
+    metadata:
+      labels:
+        app: azdemo 
+    spec:
+      containers:
+        - name: azdemo 
+          image: acrabcd.azurecr.io/azdemo
+          ports:
+          - containerPort: 80
