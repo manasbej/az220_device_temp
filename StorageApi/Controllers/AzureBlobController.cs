@@ -6,9 +6,9 @@ namespace TodoApi.Controllers;
 public class AzureBlobController : ControllerBase
 {
     private readonly IAzureBlobService _blobService;
-    private readonly ILogger<FileShareController> _logger;
+    private readonly ILogger<AzureBlobController> _logger;
 
-    public AzureBlobController(IAzureBlobService blobService, ILogger<FileShareController> logger)
+    public AzureBlobController(IAzureBlobService blobService, ILogger<AzureBlobController> logger)
     {
         _blobService = blobService ?? throw new ArgumentNullException(nameof(blobService));
         _logger = logger ?? throw new ArgumentNullException();
