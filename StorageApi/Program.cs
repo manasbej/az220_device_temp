@@ -9,7 +9,7 @@ builder.Services.AddScoped<IAzureBlobService, AzureBlobService>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(o => o.DocumentFilter<TitleFilter>());
 
 var app = builder.Build();
 
