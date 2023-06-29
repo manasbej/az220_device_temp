@@ -1,8 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 namespace TodoApi.Controllers;
 
-[ApiController]
-[Route("[controller]")]
+
 public class AzureBlobController : ControllerBase
 {
     private readonly IAzureBlobService _blobService;
