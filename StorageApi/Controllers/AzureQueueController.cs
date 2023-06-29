@@ -1,8 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 namespace StorageApi.Controllers;
 
-[ApiController]
-[Route("[controller]")]
+
 public class AzureQueueController : ControllerBase
 {
     private readonly ILogger<AzureQueueController> _logger;
