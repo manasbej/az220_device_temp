@@ -2,8 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace StorageApi.Controllers;
 
-[ApiController]
-[Route("[controller]")]
+
 public class TableStorageController : ControllerBase
 {
     private readonly ITableStorageService _storageService;
