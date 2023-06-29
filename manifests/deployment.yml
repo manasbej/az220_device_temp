@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: azdevicedemo 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: azdevicedemo
+  template:
+    metadata:
+      labels:
+        app: azdevicedemo 
+    spec:
+      containers:
+        - name: azdevicedemo 
+          image: az220containerreg.azurecr.io/azdevicedemo
+          ports:
+          - containerPort: 80
